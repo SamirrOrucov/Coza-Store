@@ -4,7 +4,7 @@ import "./index.scss";
 import { BasketSliderContext } from "../../context/BasketSliderContext";
 function Navbar() {
   const [stickyClass, setStickyClass] = useState("");
-  const {isOpen,handleClick}=useContext(BasketSliderContext)
+  const {handleClick}=useContext(BasketSliderContext)
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -42,11 +42,11 @@ function Navbar() {
           </ul>
         </div>
         <div className="icons">
-          <i class="fa-solid fa-magnifying-glass"> </i>
-            <i onClick={handleClick} class="fa-solid fa-cart-shopping">
+          <i className="fa-solid fa-magnifying-glass"> </i>
+            <i onClick={handleClick} className="fa-solid fa-cart-shopping">
                 <sup>2</sup>
             </i>
-          <i class="fa-regular fa-heart">
+          <i className="fa-regular fa-heart">
               <sup>0</sup>
           </i>
         </div>

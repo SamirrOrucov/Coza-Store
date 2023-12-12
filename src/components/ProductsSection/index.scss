@@ -1,15 +1,15 @@
 #productsSection {
-    margin-top: 50px;
+  margin-top: 50px;
   max-width: 100vw;
   .productsContainer {
     margin: 0 auto;
     width: 1350px;
-    h2{
-        font-size: 36px;
+    h2 {
+      font-size: 36px;
     }
 
     .filterSection {
-        margin-top: 20px;
+      margin-top: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -46,7 +46,7 @@
       }
     }
     .hiddenFilterBoard {
-        margin-top: 50px;
+      margin-top: 50px;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(5, 1fr);
@@ -74,34 +74,78 @@
       .title {
         font-weight: 700;
       }
-      .filterParam_Color{
-        li{
-            display: flex;
-            align-items: center;
-            gap: 12px;
+      .filterParam_Color {
+        li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
         }
-        .color{
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-            border: 1px solid lightgray;
-
+        .color {
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          border: 1px solid lightgray;
         }
       }
-      .filterParam_Tags{
+      .filterParam_Tags {
         display: flex;
-        flex-wrap: wrap ;
+        flex-wrap: wrap;
         gap: 5px;
-        
-        button{
-           
-            border: 1px solid lightgray;
-            padding: 9px 25px;
-            border-radius: 25px;
-            display: flex;
 
+        button {
+          border: 1px solid lightgray;
+          padding: 9px 25px;
+          border-radius: 25px;
+          display: flex;
+          cursor: pointer;
+          &:hover {
+            color: blue;
+            border: blue 1px solid;
+          }
         }
       }
     }
+    .hiddenSearchBoard {
+      margin-top: 50px;
+      
+      transition: 700ms;
+
+      width: 1350px;
+      height: 63px;
+      border: 1px solid lightgray;
+      button {
+        padding: 22px;
+        border: none;
+        background-color: white;
+      }
+      input {
+        width: 1286px;
+        border: none;
+        outline: none;
+        height: 60px;
+      }
+    }
   }
+}
+
+.hiddenFilterCover {
+  height: 0;
+  overflow: hidden;
+  transition: 700ms;
+}
+.hiddenSearchCover {
+  height: 0;
+  transition: 700ms;
+
+  overflow: hidden;
+}
+.showFilter {
+  transition: 700ms;
+
+  height: 265px !important;
+}
+.showSearch {
+  height: 63px ;
+
+  transition: 700ms;
 }

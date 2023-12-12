@@ -10,7 +10,7 @@ const {isOpen,handleClick}=useContext(BasketSliderContext)
       <div className="basketSlider_container">
         <div className="topSide">
         <h3>Your Cart</h3>
-        <i class="fa-solid fa-xmark" onClick={handleClick}></i>
+        <i className="fa-solid fa-xmark" onClick={handleClick}></i>
         </div>
         <div className="products">
           product

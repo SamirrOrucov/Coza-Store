@@ -1,0 +1,57 @@
+#productCard {
+  width: 317px;
+  height: 486px;
+  &:hover .quickView{
+    transform: translateY(-100px);
+  }
+
+  .image {
+    width: 315px;
+    height: 390px;
+  overflow: hidden;
+
+    &:hover img {
+      scale: 110%;
+    }
+    img {
+      transition: 500ms;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .quickView {
+        padding: 0 0 0 85px;
+        transition: 600ms;
+      button {
+        padding: 13px 25px;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+        transition: 400ms;
+        &:hover {
+          background-color: black;
+          color: white;
+        
+
+        }
+      }
+    }
+  }
+  .card_text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #999999;
+
+    i {
+        cursor: pointer;
+      &:hover {
+        color: #6275ff;
+      }
+    }
+  }
+  .price {
+    color: #666666;
+  }
+}
