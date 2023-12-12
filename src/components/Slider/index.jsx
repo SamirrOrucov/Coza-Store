@@ -20,7 +20,8 @@ function SliderHeader() {
         <Slider {...settings}>
           <div className="sliderImg">
             <div className="text">
-              <p>Man New-Season</p>
+              <p className="animate__bounceInDown" >Man New-Season</p>
+              
               <h4>New Arrivals</h4>
               <button>Shop Now</button>
             </div>

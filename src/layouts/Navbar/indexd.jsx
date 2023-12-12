@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./index.scss";
+import { BasketSliderContext } from "../../context/BasketSliderContext";
 function Navbar() {
   const [stickyClass, setStickyClass] = useState("");
-  const [isOpen, setIsOpen] = useState(false)
+  const {isOpen,handleClick}=useContext(BasketSliderContext)
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -42,11 +43,9 @@ function Navbar() {
         </div>
         <div className="icons">
           <i class="fa-solid fa-magnifying-glass"> </i>
-          <Link>
-            <i class="fa-solid fa-cart-shopping">
+            <i onClick={handleClick} class="fa-solid fa-cart-shopping">
                 <sup>2</sup>
             </i>
-          </Link>
           <i class="fa-regular fa-heart">
               <sup>0</sup>
           </i>

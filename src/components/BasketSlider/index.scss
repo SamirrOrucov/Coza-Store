@@ -1,5 +1,5 @@
 .translate{
-  transform: translate(-400px);
+  transform: translate(0px) !important;
 
 }
 #basketSlider {
@@ -56,6 +56,7 @@ transition: 500ms;
   }
 }
 .opacityDiv {
+  transition: 400ms;
   z-index: 3;
   top: 0;
   left: 0;

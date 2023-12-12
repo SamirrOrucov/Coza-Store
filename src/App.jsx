@@ -12,8 +12,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Mainlayout />}>
           <Route index element={<HomePage />} />
-          {/* <Route path="blogs" element={<Blogs />} /> */}
-          {/* <Route path="contact" element={<Contact />} /> */}
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
       </Routes>

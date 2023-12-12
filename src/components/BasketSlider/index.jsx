@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import "./index.scss"
+import { BasketSliderContext } from '../../context/BasketSliderContext'
 function BasketSlider() {
-  const [isOpen, setIsOpen] = useState(false)
-
+const {isOpen,handleClick}=useContext(BasketSliderContext)
   return (
     <>
-    <div className="opacityDiv"></div>
+    <div className={isOpen?`opacityDiv`:""}></div>
         <div id='basketSlider' className={isOpen?`translate`:''}>
       <div className="basketSlider_container">
         <div className="topSide">
         <h3>Your Cart</h3>
-        <i class="fa-solid fa-xmark" onClick={()=>setIsOpen(!isOpen)}></i>
+        <i class="fa-solid fa-xmark" onClick={handleClick}></i>
         </div>
         <div className="products">
           product
