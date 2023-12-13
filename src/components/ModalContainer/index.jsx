@@ -17,7 +17,9 @@ function ModalContainer({ id, closeModal }) {
   }
   return (
     <div>
-      <div className="modal_container">
+      <div className="modal_container"> 
+      <i className="fa-solid fa-xmark" onClick={closeModal}></i>
+
         <div className="carusel">{console.log(dataModal)}</div>
         <div className="content">
           <div className="content_text">

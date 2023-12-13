@@ -1,6 +1,7 @@
 #productCard {
   width: 317px;
   height: 486px;
+  position: relative;
   &:hover .quickView{
     transform: translateY(-100px);
   }
@@ -55,3 +56,7 @@
     color: #666666;
   }
 }
+// .productCard_container{
+//   position: relative;
+
+// }

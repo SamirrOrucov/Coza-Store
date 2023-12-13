@@ -1,13 +1,96 @@
-.footer_container{
-    background-color: #222222;
-    max-width: 100%;
-    height: 460px;
-    .footer{
-        max-width: 1350px;
-        margin: 0 auto;
-        
-        // ._bankCard{
-
-        // }
+.footer_container {
+  background-color: #222222;
+  max-width: 100%;
+  height: 460px;
+  .footer {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+gap: 90px;
+    .footer_upside {
+        padding: 50px;
+      display: flex;
+      justify-content: space-between;
+      color:#b2b2b2
+;
+      font-size: 15px;
+      .head {
+        color: white;
+      }
+      .getInTouch {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p{
+            // margin-top: 20px;
+        }
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li{
+            cursor: pointer;
+            transition: 300ms;
+            &:hover{
+                color:#7689ffb4 ;
+            }
+        }
+      }
+      .icons{
+        margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    i{
+        cursor: pointer;
+            transition: 300ms;
+            &:hover{
+                color:#7689ffb4 ;
+            }   
     }
+      }
+    }
+    .newsLetter{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input{
+            border-bottom:1px solid gray ;
+            border-right: none;
+            outline: none;
+            background-color: #222222;
+            width: 315px;
+            color: white;
+            padding: 15px 0;
+        }
+        button{
+            width: 190px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            background-color: #7689ffb4;
+            color: white;
+            cursor: pointer;
+            transition: 300ms;
+            &:hover{
+                background-color: white;
+                color:#7689ffb4 ;
+            }   
+        }
+    }
+
+    &_bankCard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        color: #b2b2b2;
+        font-size: 13px;
+
+
+    }
+  }
 }

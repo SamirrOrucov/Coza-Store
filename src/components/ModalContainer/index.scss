@@ -1,5 +1,11 @@
+
 .modal_container{
     border: 1px solid red;
-    width: 1000px;
-    height: 500px;
-}
+    width: 80vw;
+    height: 50vh;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+  }
