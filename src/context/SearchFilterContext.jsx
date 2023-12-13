@@ -5,7 +5,7 @@ function SearchFilterProvider({ children }) {
   const [showFilter, setShowFilter] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [inpValue, setInpValue] = useState("")
-  const [showModal, setShowModal] = useState(false)
+  // const [showModal, setShowModal] = useState(false)
 
 
   function showContentFilter() {
@@ -21,12 +21,9 @@ function SearchFilterProvider({ children }) {
     console.log(inpValue);
     
   }
-  function showContentModal() {
-    setShowModal(!showModal);
-    console.log(showModal);
-  }
+  
   return (
-    <SearchFilterContext.Provider value={{ showFilter, showSearch,showContentFilter,showContentShow ,setImpTargetValue,inpValue,showContentModal}}>
+    <SearchFilterContext.Provider value={{ showFilter, showSearch,showContentFilter,showContentShow ,setImpTargetValue,inpValue}}>
       {children}
     </SearchFilterContext.Provider>
   );

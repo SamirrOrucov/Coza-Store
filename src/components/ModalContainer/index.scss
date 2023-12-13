@@ -1,11 +1,131 @@
+.modal_container {
+  background-color: rgb(255, 255, 255);
+  width: 1350px;
+  height: 879px;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  display: flex;
+  // gap: 250px;
 
-.modal_container{
-    border: 1px solid red;
-    width: 80vw;
-    height: 50vh;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 4;
+  .carusel {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
+  .content {
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+    .closeModal {
+      top: 10px;
+      right: 10px;
+      font-size: 25px;
+      position: absolute;
+      cursor: pointer;    }
+    .content_text {
+      display: flex;
+      flex-direction: column;
+      .name {
+        font-size: 24px;
+      }
+      gap: 15px;
+      .price {
+        font-size: 18px;
+      }
+      .desc {
+        font-size: 14px;
+        color: #666666;
+      }
+    }
+    .configurations {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      select {
+        margin-left: 10px;
+        width: 388px;
+        height: 45px;
+        border: 1px solid lightgray;
+        outline: none;
+        option:hover {
+          background-color: rgb(82, 12, 139);
+        }
+      }
+    }
+    .counterArea {
+      display: flex;
+      gap: 70px;
+      .counter {
+        display: flex;
+        div {
+          padding: 14px 20px;
+          border: 1px solid rgba(228, 225, 225, 0.822);
+          transition: 400ms;
+          font-size: 19px;
+        }
+        .c {
+          cursor: pointer;
+          &:hover {
+            background-color: #717fe0;
+            color: white;
+          }
+        }
+      }
+      button {
+        width: 150px;
+        height: 50px;
+        border-radius: 15px;
+        background-color: #717fe0;
+        color: white;
+        border: none;
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+    .icons {
+      i {
+        cursor: pointer;
+        font-size: 25px;
+        &:hover {
+          color: #717fe0;
+        }
+      }
+    }
+  }
+
+  .thumbnails {
+    margin-left: 40px;
+    width: 600px;
+
+    img {
+      width: 100px;
+    }
+  }
+  .carousel-container {
+    width: 700px;
+    height: 600px;
+    margin-left: 30px;
+
+    .carousel-item {
+      width: 700px;
+      height: 600px;
+   
+    }
+  }
+}
+.active {
+  background-color: inherit !important;
+}

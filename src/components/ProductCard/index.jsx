@@ -3,7 +3,6 @@ import "./index.scss"
 import { SearchFilterContext } from '../../context/SearchFilterContext';
 import ModalContainer from '../ModalContainer';
 function ProductCard({url,name,price,item}) {
-  const {  showContentModal } =useContext(SearchFilterContext);
   const [openModalId, setOpenModalId] = useState(null)
   function viewModal(id) {
     setOpenModalId(id)
@@ -13,7 +12,9 @@ function ProductCard({url,name,price,item}) {
   }
   return (
     
-   <div className="productCard_container">
+    
+    <div className="productCard_container">
+     <div className={openModalId!==null ? `opacityDiv` : ""}></div>
      <div id='productCard'>
         <div className="image">
             <img src={url} alt="" />
