@@ -4,9 +4,9 @@ import { Carousel } from "react-carousel-minimal";
 import { BasketContext } from "../../context/BasketContext";
 // import ModalCarousel from "../ModalCarousel";
 
-function ModalContainer({ id, closeModal }) {
+function ModalContainer({ id, closeModal,count }) {
   const [dataModal, setDataModal] = useState([]);
-  const {addBasket} = useContext(BasketContext)
+  const {addBasket,increaseCount,decreaseCount} = useContext(BasketContext)
   const [data, setData] = useState(null)
   useEffect(() => {
     getfetch();
@@ -88,9 +88,9 @@ function ModalContainer({ id, closeModal }) {
             </div>
             <div className="counterArea">
               <div className="counter">
-                <div className="decrease a c">-</div>
-                <div className="count a">5</div>
-                <div className="increase a c">+</div>
+                <div className="decrease a c" onClick={()=>decreaseCount(id)}>-</div>
+                <div className="count a">{count}</div>
+                <div className="increase a c" onClick={()=>increaseCount(id)}>+</div>
               </div>
               <button onClick={()=>addBasket(dataModal)}>ADD TO CART</button>
             </div>

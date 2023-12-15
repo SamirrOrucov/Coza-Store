@@ -35,7 +35,7 @@ function ProductCard({url,name,price,item}) {
 
     </div>
     <div className="modalInProductCards">
-       {openModalId !==null? <ModalContainer id={openModalId} closeModal={closeModal} />:null
+       {openModalId !==null? <ModalContainer count={item.count} id={openModalId} closeModal={closeModal} />:null
 }
         </div>
    </div>

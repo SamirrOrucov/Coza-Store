@@ -1,7 +1,22 @@
+@mixin scrollbar(){
+  &::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
+  &::-webkit-scrollbar-button{
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  &::-webkit-scrollbar-corner{
+    background-color: transparent;
+  }
+}
 .translate{
   transform: translate(0px) !important;
 
 }
+
 #basketSlider {
   transform: translate(400px);
 transition: 500ms;
@@ -53,6 +68,13 @@ transition: 500ms;
         }
       }
     }
+    .products{
+      @include scrollbar();
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 70%;
+
+      }
   }
 }
 .opacityDiv {

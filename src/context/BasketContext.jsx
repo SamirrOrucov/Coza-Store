@@ -15,8 +15,22 @@ function BasketProvider({ children }) {
     basket[index].count++;
     setBasket(basket);
   }
+  function increaseCount(id) {
+    console.log(id);
+    const index = basket.findIndex((x) => x.id === id);
+    basket[index].count++
+    setBasket([...basket])
+    console.log(basket[index].count);
+        
+  }
+  function decreaseCount(id) {
+    const index = basket.findIndex((x) => x.id === id);
+    basket[index].count--
+    setBasket([...basket])
+        
+  }
   return (
-    <BasketContext.Provider value={{ addBasket, basket }}>
+    <BasketContext.Provider value={{ addBasket, basket,increaseCount,decreaseCount}}>
       {children}
     </BasketContext.Provider>
   );

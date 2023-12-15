@@ -1,0 +1,48 @@
+.basketCard_Container{
+    width: 300px;
+    height: 90px;
+    display: flex;
+    .basketCard{
+        display: flex;
+        gap: 15px;
+        .image{
+            width: 80px;
+            height: 60px;
+            position: relative;
+            &:hover .hiddenHoverX{
+                opacity: 1;
+
+            }
+            .hiddenHoverX{
+                transition: 400ms;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                position: absolute;
+                display: grid;
+                place-items: center;
+                color: white;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.479);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .text{
+            font-size: 12px;
+            font-weight: 100;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px  ;
+
+            .price{
+                color: gray;
+            }
+        }
+    }
+}

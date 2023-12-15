@@ -5,7 +5,6 @@ function SearchFilterProvider({ children }) {
   const [showFilter, setShowFilter] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [inpValue, setInpValue] = useState("")
-  // const [showModal, setShowModal] = useState(false)
 
 
   function showContentFilter() {
@@ -18,7 +17,6 @@ function SearchFilterProvider({ children }) {
   }
   function setImpTargetValue(x) {
     setInpValue(x)
-    console.log(inpValue);
     
   }
   
